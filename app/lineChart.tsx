@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { LineChart, Line, XAxis, Tooltip, CartesianGrid } from "recharts";
-
-export default function LineChartComponent({ value }) {
+interface LineChartProps {
+    value: number; // Specify the type of value here
+  }
+  const LineChartComponent: React.FC<LineChartProps> = ({ value }) => {
   const [chartData, setChartData] = useState([
     { numberOfStudent: 0, percentage: 0 },
     { numberOfStudent: 50, percentage: 25 },
@@ -47,3 +49,4 @@ export default function LineChartComponent({ value }) {
     </div>
   );
 }
+export default LineChartComponent;
