@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { LineChart, Line, XAxis, Tooltip, CartesianGrid } from "recharts";
+import { LineChart, Line, Tooltip, CartesianGrid } from "recharts";
 interface LineChartProps {
-    value: number; // Specify the type of value here
+    value: number; 
   }
   const LineChartComponent: React.FC<LineChartProps> = ({ value }) => {
   const [chartData, setChartData] = useState([
