@@ -29,19 +29,19 @@ interface LineChartProps {
         return updatedData;
       }
     });
-  }, [value]); // Re-run this effect whenever 'value' changes
+  }, [value]); 
 
   return (
-    <div>
+    <div className="">
       
       <LineChart
         data={chartData}
-        width={500}
+        width={360}
         height={300}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="percentage" />
+        
         <Tooltip />
         <Line type="monotone" dataKey="numberOfStudent" stroke="#8884d8" strokeWidth={2} />
       </LineChart>

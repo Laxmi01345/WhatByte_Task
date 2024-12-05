@@ -3,15 +3,17 @@
 import LineChart from "./lineChart"
 import Image from "next/image";
 import imgg from "./images.png"
+import trophy from "./imagess/trophy.png"
 import Leftbar from "./leftbar";
-import { TiHtml5 } from "react-icons/ti";
-import { FaAward } from "react-icons/fa6";
-import { TiTick } from "react-icons/ti";
-import { SlCalender } from "react-icons/sl";
+import logo from "./imagess/logo (1).jpg"
+import html from "./imagess/htmll.d8e9ba79.png"
+import notes from "./imagess/notes.148dff8c-removebg-preview.png"
 import ProgressBar from "@ramonak/react-progress-bar";
 import { FaArrowRight } from "react-icons/fa";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import Tick from "./imagess/tick.a79929c1.jpeg"
+import girldev from "./imagess/girldev.png"
 import { useState } from "react";
 
 export default function Home() {
@@ -35,29 +37,41 @@ export default function Home() {
 
   return (
     <div>
-      <div className="p-4 font-bold text-3xl m-1">
-        <h1>WhatBytes</h1>
-      </div>
-      <div className="grid grid-cols-[18%_82%] border-2 h-full border-gray-200  m-2">
-        <div className=" border-gray-200 border-x-2">
+      <div className="p-4 font-bold text-3xl m-1 flex items-center justify-between space-x-4">
+  <div className="flex items-center">
+    <Image src={logo} className="h-10" alt="" />
+    <h1 className="pl-2 text-xl">WhatBytes</h1>
+  </div>
+
+  <div className="flex border-2 rounded-md p-2 shadow-lg items-center">
+    <Image src={girldev} className="rounded-full h-10 w-10" alt="" />
+    <p className="text-xl ml-2">Laxmi Ray</p>
+  </div>
+</div>
+
+      <div className="md:grid md:grid-cols-[18%_82%] border-2 h-full border-gray-200  m-2">
+        <div className=" border-gray-200 border-x-2 hidden md:block">
           <Leftbar />
         </div>
-        <div className=" p-4  grid grid-cols-[60%_40%]">
+        <div className=" p-4  md:grid md:grid-cols-[60%_40%]">
           <div >
             <h1 className="p-4">Skill Test</h1>
-            <div className=" p-4 mt-4">
-              <div className="border-2 border-gray-200 rounded-md flex pb-6  pt-6 ">
-                <div className="">
-                  <TiHtml5 size={60} className="text-orange-600" />
+            <div className=" p-2 mt-2">
+              <div className="border-2 border-gray-200 rounded-md md:flex pb-6  pt-6 ">
+                <div className="justify-center flex md:pt-4">
+                  <Image src={html} alt="html logo" className="h-16 w-16" />
                 </div>
-                <div>
-                  <h1 className="font-extrabold">HyperText Markup Language</h1>
+                <div className="md:pt-4">
+                  <h1 className="font-extrabold  text-center md:text-left">HyperText Markup Language</h1>
                   <div>
-                    <h1 className="text-grey-400 ">Questions: 08 | Durations:15 mins | Submitted on 5 June 2021</h1>
+                    <h1 className="text-gray-600 pt-1 px-4 text-center">
+                      Questions: 08 | Duration: 15 mins |
+                      <span className="block sm:inline">Submitted on 5 June 2021</span>
+                    </h1>
                   </div>
 
                 </div>
-                <div className="pl-10">
+                <div className="md:pl-10 justify-center justify-content flex pt-4 md:pb-4">
                   <div className="border-2 border-black p-2 w-24 text-center rounded-md text-white bg-blue-900">
                     <button onClick={Updatefunc}>Update</button>
                   </div>
@@ -71,10 +85,11 @@ export default function Home() {
                   <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40"></div>
 
                   <div className="fixed inset-0 flex justify-center items-center z-50">
-                    <div className="bg-white p-6 rounded-lg shadow-lg w-[40%]">
+                    <div className="bg-white p-6 rounded-lg shadow-lg md:w-[40%] w-[80%]">
                       <div className="flex justify-between items-center mb-4">
                         <h1 className="font-bold text-lg">Update scores</h1>
-                        <TiHtml5 size={40} className="text-orange-600" />
+
+                        <Image src={html} alt="html logo" className="h-10 w-10" />
                       </div>
 
                       <div className="space-y-4">
@@ -104,7 +119,7 @@ export default function Home() {
 
                         <div className="flex items-center">
                           <div className="flex items-center w-[60%]">
-                            <span className="text-white rounded-full bg-blue-800 border-2 border-black w-6 h-6 flex items-center justify-center font-bold text-sm mr-4">
+                            <span className="text-white rounded-full bg-blue-800 border-2 border-black md:w-6 md:h-6 w-8 h-6 flex items-center justify-center font-bold text-sm mr-4">
                               2
                             </span>
                             <p>Update your <b>Percentile</b></p>
@@ -125,7 +140,7 @@ export default function Home() {
 
                         <div className="flex items-center">
                           <div className="flex items-center w-[60%]">
-                            <span className="rounded-full text-white border-2 bg-blue-800 border-black w-6 h-6 flex items-center justify-center font-bold text-sm mr-4">
+                            <span className="rounded-full text-white border-2 bg-blue-800 border-black md:w-6 md:h-6 w-12 h-6 flex items-center justify-center font-bold text-sm mr-4">
                               3
                             </span>
                             <p>Update your <b>Current Score (out of 15)</b></p>
@@ -167,27 +182,34 @@ export default function Home() {
 
               <div className="border-2 border-gray-200 rounded-md  pb-6  pt-6 mt-4 p-4">
                 <h1 className="font-extrabold ml-2">Quick Statistics</h1>
-                <div className="grid grid-cols-3">
-                  <div className="flex m-2">
-                    <div className="rounded-full p-4 h-14 border-2 border-gray-300 bg-gray-200">
-                      <FaAward size={20} className="text-yellow-600"/>
+                <div className="md:grid md:grid-cols-3 ">
+                  <div className="flex items-center m-2">
+                    <div className="flex items-center justify-center rounded-full h-14 w-14   bg-gray-100">
+                      <Image
+                        src={trophy}
+                        alt="trophy image"
+                        className=" h-8 w-8"
+                      />
                     </div>
 
-                    <div className="m-2">
-                      <h1 className="font-bold text-2xl"> {Rank}</h1>
-                      <div>
-                        <p className="text-gray-400 text-xs capitalize">YOUR RANK</p>
-                      </div>
-
+                    <div className="ml-4">
+                      <h1 className="font-bold text-2xl">{Rank}</h1>
+                      <p className="text-gray-400 text-xs capitalize">YOUR RANK</p>
                     </div>
+
+
 
 
 
                   </div>
-                  <div className="border-x border-grey-300 flex  m-2 pl-2">
+                  <div className="md:border-x  border-grey-300 flex  m-2 pl-2">
 
-                    <div className="rounded-full p-4 h-14 border-2 border-gray-300 bg-gray-200">
-                      <SlCalender size={20} />
+                    <div className="flex items-center justify-center rounded-full h-14 w-14   bg-gray-100">
+                      <Image
+                        src={notes}
+                        alt="trophy image"
+                        className=" h-8 w-8"
+                      />
                     </div>
                     <div className="m-2">
                       <h1 className="font-bold text-2xl">{Percentile}%</h1>
@@ -195,8 +217,12 @@ export default function Home() {
                     </div>
                   </div>
                   <div className=" m-2 flex">
-                    <div className="rounded-full p-4 h-14 border-2 border-gray-300 bg-gray-200">
-                      <TiTick size={20} className="text-green-600" />
+                    <div className="flex items-center justify-center rounded-full h-14 w-14   bg-gray-100">
+                      <Image
+                        src={Tick}
+                        alt="trophy image"
+                        className=" h-8 w-8"
+                      />
                     </div>
                     <div className="m-2">
                       <h1 className="font-bold text-2xl">{Score} / 15</h1>
@@ -210,7 +236,7 @@ export default function Home() {
                 <h1 className="font-extrabold ml-2">Comparison Graph</h1>
                 <p className="p-4"><b className="text-gray-600 font-bold">You have scored {Percentile}% percentile</b> which is lower than the average percentile 72% of all the engineers who took the assessment</p>
 
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center ">
                   <LineChart value={Percentile} />
                 </div>
 
@@ -272,9 +298,9 @@ export default function Home() {
               </div>
             </div>
             <div className=" border-2 border-gray-200 mt-4 pt-4 rounded-md mb-8">
-              <div className="mt-4 pl-4 flex space-x-60 mb-6">
+              <div className="mt-4 md:pl-4 pl-6 flex  md:space-x-60 mb-6 space-x-40">
 
-                <h1 className="font-extrabold pl-2">Question Analysis</h1>
+                <h1 className="font-extrabold md:pl-2">Question Analysis</h1>
                 <h1 className="font-bold  text-[#0066ff]">{Score}/15</h1>
               </div>
               <div>
@@ -294,7 +320,7 @@ export default function Home() {
                       position: "absolute",
                       top: "50%",
                       left: "50%",
-                      
+
                       transform: "translate(-50%, -50%)",
                       textAlign: "center",
                     }}
