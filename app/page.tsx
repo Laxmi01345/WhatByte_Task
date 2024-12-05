@@ -96,7 +96,7 @@ export default function Home() {
                         {/* Rank Input */}
                         <div className="flex items-center">
                           <div className="flex items-center w-[60%]">
-                            <span className="rounded-full text-white bg-blue-800 border-2 border-black md:w-6 md:h-6 w-8 h-6 flex items-center justify-center font-bold text-sm mr-4">
+                            <span className="rounded-full text-white bg-blue-800 border-2 border-black md:w-6 md:h-6 w-6 h-6 flex items-center justify-center font-bold text-sm mr-4">
                               1
                             </span>
                             <p>Update your <b>Rank</b></p>
@@ -118,8 +118,8 @@ export default function Home() {
 
 
                         <div className="flex items-center">
-                          <div className="flex items-center w-[60%]">
-                            <span className="text-white rounded-full bg-blue-800 border-2 border-black md:w-6 md:h-6 w-8 h-6 flex items-center justify-center font-bold text-sm mr-4">
+                          <div className="flex items-center md:w-[60%] w-[80%]">
+                            <span className="text-white rounded-full bg-blue-800 border-2 border-black  w-6 h-6 flex items-center justify-center font-bold text-sm mr-4">
                               2
                             </span>
                             <p>Update your <b>Percentile</b></p>
