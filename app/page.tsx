@@ -298,7 +298,7 @@ export default function Home() {
               </div>
             </div>
             <div className=" border-2 border-gray-200 mt-4 pt-4 rounded-md mb-8">
-              <div className="mt-4 md:pl-4 pl-6 flex  md:space-x-60 mb-6 space-x-40">
+              <div className="mt-4 md:pl-4 pl-6 flex  md:space-x-60 mb-6 space-x-20">
 
                 <h1 className="font-extrabold md:pl-2">Question Analysis</h1>
                 <h1 className="font-bold  text-[#0066ff]">{Score}/15</h1>
