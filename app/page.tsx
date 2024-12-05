@@ -39,13 +39,13 @@ export default function Home() {
     <div>
       <div className="p-4 font-bold text-3xl m-1 flex items-center justify-between space-x-4">
   <div className="flex items-center">
-    <Image src={logo} className="h-10" alt="" />
-    <h1 className="pl-2 text-xl">WhatBytes</h1>
+    <Image src={logo} className="md:h-10 h-8" alt="" />
+    <h1 className="pl-2 text-sm md:text-xl">WhatBytes</h1>
   </div>
 
   <div className="flex border-2 rounded-md p-2 shadow-lg items-center">
     <Image src={girldev} className="rounded-full h-10 w-10" alt="" />
-    <p className="text-xl ml-2">Laxmi Ray</p>
+    <p className="md:text-xl text-sm ml-2">Laxmi Ray</p>
   </div>
 </div>
 
@@ -96,7 +96,7 @@ export default function Home() {
                         {/* Rank Input */}
                         <div className="flex items-center">
                           <div className="flex items-center w-[60%]">
-                            <span className="rounded-full text-white bg-blue-800 border-2 border-black w-6 h-6 flex items-center justify-center font-bold text-sm mr-4">
+                            <span className="rounded-full text-white bg-blue-800 border-2 border-black md:w-6 md:h-6 w-8 h-6 flex items-center justify-center font-bold text-sm mr-4">
                               1
                             </span>
                             <p>Update your <b>Rank</b></p>
